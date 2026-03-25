@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Hair Studio</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --color-gold: #FFB800;
+            --card-bg: #212529;
+        }
+
+        .logo {
+            width: 240px;
+        }
+
+        .nav-links {
+            color: var(--color-gold) !important;
+            font-size: 1.2rem;
+        }
+
+        .botoes {
+            background-color: var(--color-gold);
+            transition: all 0.3s ease;
+        }
+
+        .botoes:hover {
+            background-color: #e5a600;
+            transform: translateY(-2px);
+        }
+
+        .carousel-container {
+            max-width: 650px;
+            margin: 0 auto;
+            border-radius: 4px;
+            overflow: hidden;
+            object-fit: contain;
+        }
+
+        .carousel-item img {
+            width: 500px;
+            height: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1) grayscale(100%) brightness(0);
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 0.8;
+        }
+
+        .card-servicos {
+            border: solid 2px var(--color-gold);
+            max-width: 400px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .card-servicos:hover {
+            transform: scale(1.03);
+        }
+
+        .icon-badge {
+            width: 60px;
+            height: 60px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--color-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--color-gold);
+            font-size: 1.5rem;
+        }
+
+        .rodape-titulo,
+        .card-titulo {
+            color: var(--color-gold);
+        }
+
+        .copyright-bar {
+            background-color: var(--color-gold);
+        }
+
+        .reveal {
+            animation: revealUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark">
+        <div class="container d-flex justify-content-between py-4">
+            <div>
+                <img class="logo" src="./logo.svg" alt="logo">
+            </div>
+
+            <div class="d-flex gap-3 justify-content-center align-items-center">
+                <a href="tel:+5531999999999" class="nav-links"><i class="bi bi-telephone"></i></a>
+                <a href="https://www.whatsapp.com/?lang=pt" class="nav-links"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.instagram.com/" class="nav-links"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/pt-BR/" class="nav-links"><i class="bi bi-tiktok"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container text-center py-5 reveal">
+        <h1 class="mb-3 fw-bold">Especialista em Mega Hair: Realce sua beleza natural.</h1>
+        <h2 class="mb-4">Técnicas modernas e atendimento personalizado.</h2>
+
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-4 m-5">
+            <a href="https://www.whatsapp.com/?lang=pt" class="btn botoes py-3 px-4 fw-bold shadow-sm"><i class="bi bi-whatsapp me-2"></i> Agendar via
+                WhatsApp</a>
+            <a href="tel:+5531999999999" class="btn botoes py-3 px-4 fw-bold shadow-sm"><i class="bi bi-telephone me-2"></i> Agendar via
+                Telefone</a>
+        </div>
+    </section>
+
+    <section class="container mb-5 reveal">
+        <div class="carousel-container">
+            <div id="hairCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagem-1.jpg" class="d-block mx-auto"
+                            alt="uma mulher de costas tendo duas imagens mostrando antes e depois de um mega-hair.">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="./imagem-2.webp" class="d-block mx-auto"
+                            alt="uma mulher de costas tendo duas imagens mostrando antes e depois de um mega-hair.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagem-3.jpg" class="d-block mx-auto"
+                            alt="uma mulher de costas tendo duas imagens mostrando antes e depois de um mega-hair.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagem-4.jpg" class="d-block mx-auto"
+                            alt="uma mulher de costas tendo duas imagens mostrando antes e depois de um mega-hair.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagem5.png" class="d-block mx-auto"
+                            alt="uma mulher de costas tendo duas imagens mostrando antes e depois de um mega-hair.">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hairCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hairCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 reveal" style="animation-delay: 0.4s;">
+        <div class="row g-5 justify-content-center">
+
+            <div class="col-12 col-md-4">
+                <div class="card-servicos p-4 rounded bg-dark text-center">
+                    <div class="icon-badge"><i class="bi bi-water"></i></div>
+                    <h5 class="mt-4 card-titulo">Mega Hair & Manutenção</h5>
+                    <p class="text-white">Foco em técnicas modernas</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card-servicos bg-dark rounded p-4 text-center">
+                    <div class="icon-badge"><i class="bi bi-gem"></i></div>
+                    <h5 class="mt-4 card-titulo">Venda de Cabelos Naturais</h5>
+                    <p class="text-white">Qualidade premium</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card-servicos bg-dark rounded p-4 text-center">
+                    <div class="icon-badge"><i class="bi bi-stars"></i></div>
+                    <h5 class="mt-4 card-titulo">Hidratação & Tratamentos</h5>
+                    <p class="text-white">Saúde dos fios</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container text-center py-5 reveal">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h4>Referência na região desde 2021, unimos profissionalismo e
+                    inovação para oferecer um visual impecável.</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-5 reveal bg-dark text-white">
+        <div class="container pb-5">
+            <div class="row g-4 text-md-start">
+                <div class="col-md-5">
+                    <h6 class="rodape-titulo mb-3 fw-bold">Localização e Contato</h6>
+                    <p class="mb-0">Rua Santa Rita Durão, 1050 — Savassi Belo Horizonte - MG </p>
+                    <p class="mb-2">CEP: 30140-111</p>
+                    <p class="mb-1"><i class="bi bi-telephone"></i> (31) 9999-9999</p>
+                    <p><i class="bi bi-whatsapp"></i> (31) 9999-9999</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="rodape-titulo mb-3 fw-bold">Horários</h6>
+                    <p class="mb-0">Terça a Quarta: 09h às 19h</p>
+                    <p class="mb-0">Quinta e Sexta: 09h às 20h</p>
+                    <p class="mb-0">Sábado: 08:30h às 17h</p>
+                    <p class="mb-0">Segunda e Domingo: Fechado</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="rodape-titulo mb-3 fw-bold">Redes</h6>
+                    <div class="gap-3">
+                        <a class="text-white" href="https://www.instagram.com/"><i
+                                class="bi bi-instagram fs-4 pe-2"></i></a>
+                        <a class="text-white" href="https://www.tiktok.com/pt-BR/"><i class="bi bi-tiktok fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-bar text-center py-2 text-black fw-bold">
+            ©2026 Bella Hair Studio. Todos os Direitos Reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
