@@ -7,7 +7,7 @@
     user-select: none;
 }
 
-.container{
+.container {
     overflow-x: hidden;
 }
 
@@ -67,6 +67,23 @@
     transition: transform 0.3s ease;
     position: relative;
     padding-top: 40px !important;
+}
+
+.card-precos{
+    max-width: 350px;
+    height: 650px;
+    border: solid 2px var(--color-gold) !important;
+    width: 100% !important;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    padding-top: 40px !important;
+}
+
+.card-precos img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 2px;
 }
 
 .card-servicos:hover {
